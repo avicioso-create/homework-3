@@ -1,102 +1,94 @@
-{
-    box-sizing: border-box;
+*, *::before, *::after {
+  box-sizing: border-box;
 }
- 
+
 body {
-    background-color: #0a0a0a;
-    font-family: "Times New Roman", Times, serif;
-    color: rgb(229, 229, 236);
-    margin: 0;
-    padding: 20px;
+  background-color: #0a0a0a;
+  font-family: "Times New Roman", Times, serif;
+  color: rgb(229, 229, 236);
+  margin: 0;
+  padding: 20px;
 }
- 
+
 h1, h2, h3 {
-    color: #f59906;
+  color: #f59906;
 }
- 
 
 img {
-    max-width: 100%;
-    height: auto;
-    display: block;
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
- 
 
 .main-header {
-    display: flex;
-    flex-direction: column;      
-    align-items: center;
-    gap: 15px;
-    text-align: center;
-    margin-bottom: 20px;
-    padding: 15px;
-    border: 3px solid #efc426;
-    border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 15px;
+  border: 3px solid #efc426;
+  border-radius: 8px;
 }
- 
-.header-logo {
-    width: 120px;
-    border: 1px solid #444;
-}
- 
-.header-text h1 {
-    font-size: 2em;
-    margin: 0;
-}
- 
 
+.header-logo {
+  width: 120px;
+  border: 1px solid #444;
+}
+
+.header-text h1 {
+  font-size: 2em;
+  margin: 0;
+}
+
+/* Mobile viewport layout (320px) */
 .card-grid {
-    display: grid;
-    grid-template-columns: 1fr;  
-    gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
 }
- 
+
 .card {
-    background-color: #1a1a1a;
-    border: 1px solid #444;
-    border-radius: 8px;
-    padding: 20px;
+  background-color: #1a1a1a;
+  border: 1px solid #444;
+  border-radius: 8px;
+  padding: 20px;
 }
- 
+
 .card-img {
-    margin: 15px auto;
-    border: 1px solid #444;
+  margin: 15px auto;
+  border: 1px solid #444;
 }
- 
+
 .benefits-list {
-    padding-left: 20px;
-    line-height: 1.6;
+  padding-left: 20px;
+  line-height: 1.6;
 }
- 
 
 .main-footer {
-    text-align: center;
-    margin-top: 20px;
-    padding-top: 15px;
-    border-top: 1px solid #444;
+  text-align: center;
+  margin-top: 20px;
+  padding-top: 15px;
+  border-top: 1px solid #444;
 }
- 
 
+/* Tablet viewport layout (768px) */
 @media (min-width: 768px) {
-    .main-header {
-        flex-direction: row;     
-        justify-content: center;
-        text-align: left;
-    }
- 
-    .card-grid {
-        grid-template-columns: repeat(2, 1fr);  
-    }
+  .main-header {
+    flex-direction: row;
+    justify-content: center;
+    text-align: left;
+  }
+  
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr); /* Splits cards into 2 columns on tablets */
+  }
 }
- 
 
+/* Desktop viewport layout (1200px) */
 @media (min-width: 1200px) {
-    body {
-        max-width: 1200px;
-        margin: 0 auto;          
-    }
- 
-    .card-grid {
-        grid-template-columns: repeat(3, 1fr);  
-    }
-}
+  .card-grid {
+    grid-template-columns: repeat(3, 1fr); /* Splits cards into 3 columns on desktops */
+  }
+} 
