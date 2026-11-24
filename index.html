@@ -1,26 +1,29 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Adrian Vicioso, Strength Coach</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
     <header class="main-header">
-        <img src="Artboard 3-100.jpg" alt="Company logo" class="profile-logo">
-        <h1>Home</h1>
-        <p>Adrian Vicioso, Strength Coach</p>
+        <img src="Artboard 3-100.jpg" alt="Company logo" class="header-logo">
+        <div class="header-text">
+            <h1>Home</h1>
+            <p>Adrian Vicioso, Strength Coach</p>
+        </div>
     </header>
 
-    <main>
-        <section>
+    <main class="card-grid">
+        <section class="card">
             <h2>Welcome to the Best Routine</h2>
             <p>This is 300 Training.</p>
-            <img src="300.png" alt="300 training logo" class="profile logo">
+            <img src="300.png" alt="300 training logo" class="card-img">
         </section>
 
-        <section>
+        <section class="card">
             <h2>The 90-Day Transformation</h2>
             <p>This is the first website that gives you the famous routine that changes your body in 90 days.</p>
             <h3>In just 90 days, you will have the body you need</h3>
@@ -28,12 +31,38 @@
                 <li>Designed by a certified Strength Coach</li>
                 <li>Be ready to be transformed</li>
             </ul>
-            <img src="Adrian-Vicioso.jpg" alt="Adrian Vicioso, creator of the routine" class="profile-logo">
+            <img src="Adrian-Vicioso.jpg" alt="Adrian Vicioso, creator of the routine" class="card-img">
+        </section>
+
+        <!-- 1. Button changes content -->
+        <section class="card">
+            <h2>Today's Workout</h2>
+            <p id="workout-text">Press the button to see a workout.</p>
+            <button type="button" id="workout-button" class="action-button">Show Workout</button>
+        </section>
+
+        <!-- 2. Style changes on input -->
+        <section class="card">
+            <h2>Set Your Goal</h2>
+            <label for="goal-input">What is your 90-day goal?</label>
+            <input type="text" id="goal-input" class="text-input" placeholder="Example: Lose 15 pounds">
+            <p id="goal-preview">Your goal will show here.</p>
+        </section>
+
+        <!-- 3. Dynamic list -->
+        <section class="card">
+            <h2>My Exercise List</h2>
+            <label for="exercise-input">Add an exercise:</label>
+            <div class="add-row">
+                <input type="text" id="exercise-input" class="text-input" placeholder="Example: 50 squats">
+                <button type="button" id="add-exercise-button" class="action-button">Add</button>
+            </div>
+            <ul id="exercise-list" class="exercise-list"></ul>
         </section>
     </main>
 
-    <footer>
+    <footer class="main-footer">
         <p>Created by Adrian Vicioso.</p>
     </footer>
 </body>
-</html>
+</html> 
